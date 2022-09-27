@@ -6,9 +6,9 @@ Analysis portal window where users are able to upload almost any type of csv/jso
 
 This data is added to the relevant SQL databases, hereafter the user may visualise the data in the means of:
 
-# Charts
-# Tables
-# Maps
+1) Charts
+2) Tables
+3) Maps
 
 With the addition of being able to compile notes and team event reminders/notifications.
 
