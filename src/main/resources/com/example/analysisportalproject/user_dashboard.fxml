@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="dashboardBackground" prefHeight="768.0" prefWidth="1366.0" styleClass="gradient-background" stylesheets="@style/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.analysisportalproject.DashboardController">
+   <top>
+      <HBox maxHeight="-Infinity" prefHeight="50.0" prefWidth="1366.0" spacing="20.0" BorderPane.alignment="CENTER_LEFT">
+         <children>
+            <Label fx:id="dashboardHeading" alignment="CENTER" prefHeight="72.0" prefWidth="199.0" text="Admin Dashboard" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="18.0" />
+               </font>
+            </Label>
+            <Pane fx:id="dashboardLine" maxHeight="-Infinity" prefHeight="1.0" prefWidth="300.0" styleClass="line-color" stylesheets="@style/styles.css" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets top="25.0" />
+               </HBox.margin>
+            </Pane>
+            <Label fx:id="userLabel" alignment="CENTER" prefHeight="29.0" prefWidth="135.0" textFill="#fffefe">
+               <HBox.margin>
+                  <Insets top="15.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="DejaVu Sans Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <GridPane fx:id="adMenuBar" prefHeight="708.0" prefWidth="109.0" styleClass="container" stylesheets="@style/styles.css" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="81.0" minWidth="10.0" prefWidth="67.66666412353516" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.33333587646484" minWidth="10.0" prefWidth="110.33333587646484" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@img/icons8-table-50.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label fx:id="tableLabel" prefHeight="32.0" prefWidth="57.0" styleClass="tables-label" stylesheets="@style/styles.css" text="Tables" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="24.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@img/icons8-map-marker-50.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="77.0" layoutY="114.0" prefHeight="32.0" prefWidth="49.0" styleClass="maps-label" stylesheets="@style/styles.css" text="Maps" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="24.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@img/icons8-combo-chart-50.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="77.0" layoutY="210.0" prefHeight="32.0" prefWidth="57.0" styleClass="charts-label" stylesheets="@style/styles.css" text="Charts" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <ImageView fx:id="settingsImg" fitHeight="25.0" fitWidth="25.0" layoutX="24.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@img/icons8-settings-24.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="24.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@img/icons8-document-30.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="77.0" layoutY="354.0" prefHeight="32.0" prefWidth="40.0" styleClass="mydata-label" stylesheets="@style/styles.css" text="Data" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="31.0" layoutY="648.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@img/icons8-pen-64.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="91.0" layoutY="349.0" prefHeight="32.0" prefWidth="55.0" styleClass="mydata-label" stylesheets="@style/styles.css" text="Notes" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="10.0" layoutY="446.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@img/icons8-notification-64.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="91.0" layoutY="450.0" prefHeight="32.0" prefWidth="53.0" styleClass="mydata-label" stylesheets="@style/styles.css" text="Alerts" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="54.0" layoutY="551.0" prefHeight="32.0" prefWidth="71.0" styleClass="mydata-label" stylesheets="@style/styles.css" text="Log Out" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <SplitPane dividerPositions="0.5" prefHeight="656.0" prefWidth="1237.0" style="-fx-background-color: #212529;" stylesheets="@style/styles.css">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="650.0" prefWidth="618.5">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="577.0" styleClass="dashboard-clock-vbox" stylesheets="@style/styles.css">
+                                 <children>
+                                    <Label fx:id="dashboardDate" alignment="CENTER" text="Date" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="DejaVu Sans Bold" size="40.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="dashboardClock" alignment="CENTER" text="Clock" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="DejaVu Sans Bold" size="40.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="572.0" prefWidth="619.0">
+                                 <children>
+                                    <AreaChart prefHeight="460.0" prefWidth="619.0" title="Monthly Usage Statistics">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                    </AreaChart>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="650.0" prefWidth="618.5">
+                           <children>
+                              <Label text="Web View Heading goes here" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets bottom="60.0" top="30.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="DejaVu Sans Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

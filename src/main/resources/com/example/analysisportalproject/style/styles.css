@@ -1,0 +1,59 @@
+/*.root{
+--blue: #5e72e4;
+    --indigo: #5603ad;
+    --purple: #8965e0;
+    --pink: #f3a4b5;
+    --red: #f5365c;
+    --orange: #fb6340;
+    --yellow: #ffd600;
+    --green: #2dce89;
+    --teal: #11cdef;
+    --cyan: #2bffc6;
+    --white: #ffffff;
+    --gray: #6c757d;
+    --gray-dark: #32325d;
+    --light: #ced4da;
+    --lighter: #e9ecef;
+    --primary: #e14eca;
+    --secondary: #f4f5f7;
+    --success: #00f2c3;
+    --info: #1d8cf8;
+    --warning: #ff8d72;
+    --danger: #fd5d93;
+    --light: #adb5bd;
+    --dark: #212529;
+}*/
+.gradient-background{
+    /* Fiddle with the color below
+    */
+    /*-fx-background-color: linear-gradient(from 25% 25% to 100% 100% , #D91F4E, #FF854C); */
+    -fx-background-color: #212529;
+}
+.line-color{
+    -fx-background-color: #FFFFFF;
+}
+
+.container{
+    -fx-background-color: red;
+    -fx-background-radius: 10;
+}
+
+.tables-label , .maps-label , .charts-label , mydata-label , logout-label{
+    -fx-text-fill: #FFFFFF;
+}
+
+.tables-label:hover .maps-label , .charts-label , mydata-label:hover , logout-label:hover{
+
+   /*fx-focus-color: #0093ff;*/
+}
+
+.split-pane-divider{
+    -fx-background-color: transparent;
+}
+
+.dashboard-clock-vbox{
+    -fx-border-color: white;
+    /*-fx-border-insets: 5;*/
+    -fx-border-width: 3;
+    -fx-border-radius: 10;
+}
